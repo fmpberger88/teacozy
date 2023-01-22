@@ -1,0 +1,180 @@
+:root {
+    --color-text: gainsboro;
+    --back-color: hsl(60, 2%, 22%); 
+}
+
+body {
+    font-family: helvetica, sans-serif;
+    background-color: var(--back-color);
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    height: 79
+        px;
+    position: fixed;
+    background-color: var(--back-color);
+}
+
+.navlist {
+    display: inline-flex;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: flex-end;
+}
+
+.button {
+    font-weight: 600;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    color: var(--color-text);
+    padding-left: 15px;
+    text-decoration: underline;
+}
+
+.jumbotron  {
+    height: 900px;
+    background-image: url(img-mission-background.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mission {
+    font-weight: 1000;
+    font-size: clamp(2rem, 5vw, 3rem);
+    justify-content: center;
+    margin: auto;
+    margin-top: 90px;
+    color: gainsboro;
+    background-color: var(--back-color);
+    width: 100%;
+    text-align: center;
+}
+
+.description {
+    font-weight: 700;
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    justify-content: center;
+    margin-bottom: 70px;
+    width: 100%;
+    background-color: var(--back-color);
+    color: var(--color-text);
+    text-align: center;
+}
+
+.teaofmonth-titel {
+    display: flex;
+    justify-content: center;
+}
+    
+.titel_a,
+.titel_b{
+    color: var(--color-text);
+    text-align: center;
+}
+
+.titel_a {
+    font-size: clamp(1.5rem, 2.5vw, 1.5rem);
+}
+
+.titel_b {
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+}
+
+.teaofmonth-pic {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.pic {
+    padding: 10px;
+}
+
+p {
+    color: var(--color-text);
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    text-align: center;
+}
+
+.locations {
+    background-image: url(img-locations-background.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.loc-titel {
+    text-align: center;
+    color: var(--color-text);
+    padding-top: 20px;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.loc-container {
+    display: flex;
+    height: 700px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.downtown,
+.east,
+.oakdale {
+    background-color: var(--back-color);
+    margin: auto;
+    padding: 10px
+    
+}
+
+.contact {
+    color: var(--color-text);
+    text-align: center;
+    padding-top: 30px;
+    height: 200px;
+}
+
+.contact h2 {
+    font-size: clamp(1.5rem, 2.5vw, 1.5rem);
+}
+
+.contact h5 {
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
+
+footer p {
+    text-align: left;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
