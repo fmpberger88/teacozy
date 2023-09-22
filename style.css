@@ -6,8 +6,8 @@
 body {
     font-family: helvetica, sans-serif;
     background-color: var(--back-color);
-    width: 100vw;  /* Fixiert die Breite des Inhalts auf die Bildschirmbreite */
-    overflow-x: hidden;  /* Verhindert horizontales Scrollen */
+    max-width: 1200px; /* anstatt eine feste Breite zu setzen, verwenden Sie max-width */
+    margin: 0 auto; /* zentriert den Inhalt */
 }
 
 .navbar {
@@ -16,12 +16,15 @@ body {
     height: 79px;
     position: fixed;
     background-color: var(--back-color);
+    padding: 0 20px; /* Fügt an den Seiten der Navbar Polster hinzu */
+
 }
 
 .navlist {
     display: inline-flex;
     list-style: none;
     align-items: flex-end;
+    padding-left: 30px;
 }
 
 .navlist a {
@@ -50,6 +53,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 50px 0;
 }
 
 .mission, .description {
@@ -90,8 +94,10 @@ body {
 }
 
 .teaofmonth-pic {
+    width: 100%;
     display: flex;
-    justify-content: center
+    justify-content: center;
+    gap: 5px;
 }
 
 .pic {
@@ -126,12 +132,15 @@ p {
     display: flex;
     height: 700px;
     justify-content: space-between;
+    gap: 5px;
 }
 
+/* Gemeinsamer Stil für jede Box */
 .downtown, .east, .oakdale {
-    background-color: var(--back-color);
-    margin: auto;
-    padding: 10px
+    flex: 1; /* Sorgt dafür, dass jede Box den gleichen Anteil am verfügbaren Raum hat */
+    padding: 10px; /* Fügt einen Innenabstand für jeden Block hinzu. Dies ist optional, kann aber nützlich sein, um den Inhalt etwas zu "atmen" zu lassen. */
+    box-sizing: border-box; /* Damit der Innenabstand und die Ränder im Gesamtbreitenberechnung inbegriffen sind */
+    color: black;
 }
 
 .contact {
@@ -153,4 +162,27 @@ footer p {
     text-align: center;
     color: var(--color-text);
     padding: 30px 0;
+}
+
+/* Media Query für Tablets und kleinere Geräte */
+@media only screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navlist {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .teaofmonth-pic, .loc-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Optional: Media Query für noch kleinere Geräte wie Handys */
+@media only screen and (max-width: 480px) {
+    /* Stile spezifisch für Mobilgeräte */
 }
