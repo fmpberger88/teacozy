@@ -1,6 +1,7 @@
 :root {
     --color-text: gainsboro;
     --back-color: hsl(60, 2%, 22%);
+    --darker-text-color: hsl(60, 2%, 12%)
 }
 
 body {
@@ -180,6 +181,11 @@ footer p {
         flex-direction: column;
         align-items: center;
     }
+}
+
+.loc-container div p {
+    color: var(--darker-text-color);
+    font-weight: bold;
 }
 
 /* Optional: Media Query für noch kleinere Geräte wie Handys */
