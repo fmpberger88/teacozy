@@ -1,27 +1,36 @@
 :root {
     --color-text: gainsboro;
-    --back-color: hsl(60, 2%, 22%); 
+    --back-color: hsl(60, 2%, 22%);
 }
 
 body {
     font-family: helvetica, sans-serif;
     background-color: var(--back-color);
+    width: 100vw;  /* Fixiert die Breite des Inhalts auf die Bildschirmbreite */
+    overflow-x: hidden;  /* Verhindert horizontales Scrollen */
 }
 
 .navbar {
     display: flex;
     width: 100%;
-    height: 79
-        px;
+    height: 79px;
     position: fixed;
     background-color: var(--back-color);
 }
 
 .navlist {
     display: inline-flex;
-    flex-wrap: wrap;
     list-style: none;
     align-items: flex-end;
+}
+
+.navlist a {
+    color: var(--color-text);  /* Macht den Text sichtbar */
+    text-decoration: none;  /* Entfernt die Unterstreichung */
+}
+
+.navlist a:hover {
+    text-decoration: underline;  /* Fügt eine Unterstreichung beim Überfahren mit der Maus hinzu */
 }
 
 .button {
@@ -32,68 +41,66 @@ body {
     text-decoration: underline;
 }
 
-.jumbotron  {
+.jumbotron {
     height: 900px;
     background-image: url(img-mission-background.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
+.mission, .description {
+    color: var(--color-text);
+    text-align: center;
+    background-color: var(--back-color);
+    width: 100%;
+}
+
 .mission {
     font-weight: 1000;
     font-size: clamp(2rem, 5vw, 3rem);
-    justify-content: center;
-    margin: auto;
     margin-top: 90px;
-    color: gainsboro;
-    background-color: var(--back-color);
-    width: 100%;
-    text-align: center;
 }
 
 .description {
     font-weight: 700;
     font-size: clamp(1.25rem, 3vw, 1.5rem);
-    justify-content: center;
     margin-bottom: 70px;
-    width: 100%;
-    background-color: var(--back-color);
-    color: var(--color-text);
-    text-align: center;
 }
 
-.teaofmonth-titel {
+.teaofmonth-title {
     display: flex;
     justify-content: center;
 }
-    
-.titel_a,
-.titel_b{
+
+.title_a, .title_b {
     color: var(--color-text);
     text-align: center;
 }
 
-.titel_a {
+.title_a {
     font-size: clamp(1.5rem, 2.5vw, 1.5rem);
 }
 
-.titel_b {
+.title_b {
     font-size: clamp(1.25rem, 2.5vw, 1.5rem);
 }
 
 .teaofmonth-pic {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center
 }
 
 .pic {
     padding: 10px;
+}
+
+.pic img {
+    width: 300px;
+    height: 200px;
 }
 
 p {
@@ -106,10 +113,9 @@ p {
     background-image: url(img-locations-background.jpg);
     background-size: cover;
     background-position: center;
-    
 }
 
-.loc-titel {
+.loc-title {
     text-align: center;
     color: var(--color-text);
     padding-top: 20px;
@@ -119,17 +125,13 @@ p {
 .loc-container {
     display: flex;
     height: 700px;
-    flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.downtown,
-.east,
-.oakdale {
+.downtown, .east, .oakdale {
     background-color: var(--back-color);
     margin: auto;
     padding: 10px
-    
 }
 
 .contact {
@@ -139,7 +141,7 @@ p {
     height: 200px;
 }
 
-.contact h2 {
+.contact h1 {
     font-size: clamp(1.5rem, 2.5vw, 1.5rem);
 }
 
@@ -148,33 +150,7 @@ p {
 }
 
 footer p {
-    text-align: left;
-    font-size: 18px;
+    text-align: center;
+    color: var(--color-text);
+    padding: 30px 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
